@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.langchao.leo.esplayer.ui.widget.autoscrollviewpager.AutoScrollViewPager
+        android:id="@+id/avp_radio"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:layout_alignParentTop="true"
+        android:background="#44444444" />
+
+    <RadioGroup
+        android:id="@+id/panel_vp_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/avp_radio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:divider="@drawable/common_ll_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle" />
+
+    <LinearLayout
+        android:id="@+id/panel_shortcut_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avp_radio"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <TextView
+            android:id="@+id/tv_radio_at_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/at_home"
+            android:gravity="center"
+            android:text="在家"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_radio_surf_internet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/surf_the_internet"
+            android:gravity="center"
+            android:text="上网"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_radio_relax_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/relax_time"
+            android:gravity="center"
+            android:text="放松"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_radio_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/more_list"
+            android:gravity="center"
+            android:text="更多"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</RelativeLayout>

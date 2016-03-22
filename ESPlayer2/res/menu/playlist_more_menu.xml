@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/item_add_music"
+        android:orderInCategory="0"
+        android:title="@string/add_music"/>
+
+    <item 
+        android:id="@+id/item_change_cover"
+        android:orderInCategory="1"
+        android:title="@string/change_cover"/>
+
+</menu>

@@ -1,0 +1,165 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+#设置混淆的压缩比率 0 ~ 7
+-optimizationpasses 5
+
+#混淆时不会产生形形色色的类名
+-dontusemixedcaseclassnames
+
+#指定不去忽略非公共的类库
+-dontskipnonpubliclibraryclasses
+-dontskipnonpubliclibraryclassmembers
+
+-dontpreverify
+
+#标识混淆后生产映射文件 map 即，类名->转化后类名的映射
+-verbose
+
+-dontwarn
+
+#混淆采用的算法，不要写错
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
+#不进行混淆保持原样 
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+# 支持包下的文件均不混淆
+-keep class android.support.** {*;}
+
+# 使用注解的属性不混淆
+-keepattributes *Annotation*
+-keepattributes Signature
+
+#所有native的方法不能去混淆.
+-keepclasseswithmembernames class * {
+native <methods>;
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers class * extends android.app.Activity {
+public void *(android.view.View);
+}
+
+-keepclassmembers class * extends android.support.v4.app.Fragment {
+   public void *(android.view.View);
+}
+
+#AIDL 或者android提供的序列化接口
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+#serializable不混淆
+-keep public class * implements java.io.Serializable{*;}
+
+#
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+#
+-keep class **.R$* {
+	<fields>;
+    <methods>;
+}
+########################### 通用配置完成  ###################################
+########################### 项目定制配置  ###################################
+## ----------------------------------
+##      三方库
+## ----------------------------------
+-libraryjars libs/activation.jar
+-libraryjars libs/additionnal.jar
+-libraryjars libs/gson-2.5.jar
+-libraryjars libs/httpcore-4.4.1.jar
+-libraryjars libs/jaudiotagger-2.0.3.jar
+-libraryjars libs/mail.jar
+-libraryjars libs/nineoldandroids-2.4.0.jar
+-libraryjars libs/okhttp-2.3.0.jar
+-libraryjars libs/okio-1.3.0.jar
+-libraryjars libs/umeng-analytics-v5.6.4.jar
+-libraryjars libs/universal-image-loader-1.9.5.jar
+-libraryjars libs/volley-1.0.19.jar
+
+## ----------------------------------
+##      Gson相关
+## ----------------------------------
+-keep class com.google.gson.** { *; }
+-keep class com.langchao.leo.esplayer.bean.FMChannelBean { *; }
+-keep class com.langchao.leo.esplayer.bean.FMSongEntity$* { *; }
+-keep class com.langchao.leo.esplayer.bean.FMChannelEntity$* { *; }
+
+## ----------------------------------
+##      UIL相关
+## ----------------------------------
+-keep class com.nostra13.universalimageloader.** { *; }
+-keepclassmembers class com.nostra13.universalimageloader.** {*;}
+
+## ----------------------------------
+##      Volley相关
+## ----------------------------------
+-dontwarn org.apache.http.**
+-dontwarn com.android.volley.**
+-dontwarn okio.**
+-dontwarn com.squareup.okhttp.**
+-keep class com.android.volley.**{*;}
+-keep class org.apache.http.** {*;}
+-keep class okio.** {*;}
+-keep class com.squareup.okhttp.** {*;}
+-keep class com.langchao.leo.esplayer.http.OkHttpStack {*;}
+-keep class com.langchao.leo.esplayer.bean.** {*;}
+
+## ----------------------------------
+##      mail相关
+## ----------------------------------
+-dontwarn javax.activation.**
+-dontwarn org.apache.harmony.**
+-dontwarn com.sun.mail.**
+-keep class javax.mail.** {*;}
+-keep class com.sun.mail.** {*;}
+-keep class javax.activation.** {*;}
+-keep class org.apache.harmony.** {*;}
+-keep class java.security.** {*;}
+
+## ----------------------------------
+##      jaudiotagger相关
+## ----------------------------------
+-dontwarn org.jaudiotagger.** 
+-keep class org.jaudiotagger.**{*;}
+
+## ----------------------------------
+##      友盟相关
+## ----------------------------------
+-keepclassmembers class * {
+   public void *(org.json.JSONObject);
+}

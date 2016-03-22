@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_grey"
+    android:clickable="true"
+    android:focusable="true" >
+
+    <ImageView
+        android:id="@+id/iv_playlist_cover"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_top_bg" />
+
+    <FrameLayout
+        android:id="@+id/panel_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent" >
+
+        <TextView
+            android:id="@+id/tv_nav_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:drawableLeft="@drawable/ic_arrow_back_white"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="12dp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_nav_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="页面标题"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_nav_more_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="12dp"
+            android:drawableLeft="@drawable/ic_more_option_white"
+            android:padding="8dp"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/panel_playlist_option_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignBottom="@id/iv_playlist_cover"
+        android:background="@color/translucence_white55" >
+
+        <RelativeLayout
+            android:id="@+id/panel_playlist_play_all"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" >
+
+            <ImageView
+                android:id="@+id/iv_playlist_music_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_music_white" />
+
+            <TextView
+                android:id="@+id/tv_playlist_play_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_playlist_music_icon"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="-4dp"
+                android:layout_toRightOf="@id/iv_playlist_music_icon"
+                android:text="@string/play_all_music"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_playlist_music_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_playlist_music_icon"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="-2dp"
+                android:layout_toRightOf="@id/iv_playlist_music_icon"
+                android:text="@string/num_of_music"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_playlist_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="12dp"
+            android:drawableLeft="@drawable/ic_manage_white"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="@string/manage"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_playlist_music_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_playlist_cover"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp" />
+
+</RelativeLayout>

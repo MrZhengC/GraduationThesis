@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_grey" >
+
+    <include
+        android:id="@+id/panel_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        layout="@layout/layout_navigation_bar" />
+
+    <ListView
+        android:id="@+id/lv_playlist_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_playlist_manage_delete"
+        android:layout_below="@id/panel_nav_bar"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/tv_playlist_manage_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/trash"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="删除"
+        android:textColor="@android:color/white"
+        android:textSize="16dp" />
+
+</RelativeLayout>

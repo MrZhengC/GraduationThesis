@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_grey" >
+
+    <include
+        android:id="@+id/panel_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_navigation_bar" />
+
+    <ListView
+        android:id="@+id/lv_music_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/panel_music_manage_bottom"
+        android:layout_below="@id/panel_nav_bar"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:id="@+id/panel_music_manage_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:divider="@drawable/common_ll_divider"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp"
+        android:background="@android:color/white"
+        android:showDividers="middle" >
+
+        <TextView
+            android:id="@+id/tv_music_manage_add_to_playlist"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="添加到播放列表"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tv_music_manage_delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="删除"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>

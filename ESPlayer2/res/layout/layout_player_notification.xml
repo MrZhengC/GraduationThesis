@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notification_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#66EEEEEE" >
+
+    <ImageView
+        android:id="@+id/notification_artist_image"
+        android:layout_width="64.0dip"
+        android:layout_height="64.0dip"
+        android:background="#00000000"
+        android:scaleType="centerCrop"
+        android:src="@drawable/song_cover" />
+
+    <TextView
+        android:id="@+id/notification_music_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/notification_artist_image"
+        android:focusable="true"
+        android:maxEms="6"
+        android:singleLine="true"
+        android:text="有多少爱可以重来"
+        android:textColor="#FFADABFF"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/notification_music_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/notification_artist_image"
+        android:layout_alignLeft="@id/notification_music_title"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/notification_artist_image"
+        android:maxEms="8"
+        android:text="迪克牛仔~迪克牛仔"
+        android:textColor="#FFADABFF"
+        android:textSize="13dp" />
+
+    <ImageButton
+        android:id="@+id/notification_exit_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/common_btn_bg"
+        android:src="@drawable/ic_clear" />
+
+    <ImageButton
+        android:id="@+id/notification_next_song_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toLeftOf="@+id/notification_exit_button"
+        android:layout_toStartOf="@+id/notification_exit_button"
+        android:background="@drawable/common_btn_bg"
+        android:src="@drawable/ic_skip_next" />
+
+    <ImageView
+        android:id="@+id/notification_play_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toLeftOf="@id/notification_next_song_button"
+        android:layout_toStartOf="@id/notification_next_song_button"
+        android:background="@drawable/common_btn_bg"
+        android:src="@drawable/ic_play_arrow" />
+
+</RelativeLayout>

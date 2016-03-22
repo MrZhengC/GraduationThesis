@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="option_array">
+        <item>定时关闭</item>
+        <item>音乐闹钟</item>
+        <item>扫描音乐</item>
+        <item>意见反馈</item>
+    </string-array>
+    
+</resources>

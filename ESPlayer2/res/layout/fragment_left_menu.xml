@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translucence_white99" >
+
+    <RelativeLayout
+        android:id="@+id/panel_left_menu_top"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/tv_slogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="@string/slogan"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/panel_left_menu_bottom"
+        android:layout_below="@id/panel_left_menu_top"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="4dp" />
+
+    <RelativeLayout
+        android:id="@+id/panel_left_menu_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true" >
+
+        <CheckBox
+            android:id="@+id/btn_only_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/only_wifi_btn_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/only_wifi" />
+
+        <TextView
+            android:id="@+id/tv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:drawableLeft="@drawable/exit"
+            android:drawablePadding="8dp"
+            android:text="@string/exit"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tv_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@id/tv_exit"
+            android:drawableLeft="@drawable/settings"
+            android:drawablePadding="8dp"
+            android:text="@string/settings"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

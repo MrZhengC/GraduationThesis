@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.langchao.leo.esplayer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 监听电话权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <!-- 友盟统计所需权限 -->
+    <!-- 访问wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 读取手机状态信息 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 友盟统计所需权限 -->
+
+    <application
+        android:name="com.langchao.leo.esplayer.app.ESApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="com.langchao.leo.esplayer.ui.activities.CoverActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.langchao.leo.esplayer.ui.activities.MusicAlarmActivity" >
+        </activity>
+        <activity android:name="com.langchao.leo.esplayer.ui.activities.MusicScannerActivity" >
+        </activity>
+        <activity android:name="com.langchao.leo.esplayer.ui.activities.FeedbackActivity" >
+        </activity>
+        <activity android:name="com.langchao.leo.esplayer.ui.activities.SettingsActivity" >
+        </activity>
+        <activity android:name="com.langchao.leo.esplayer.ui.activities.CommonMusicManageAcitivity" >
+        </activity>
+        <activity android:name="com.langchao.leo.esplayer.ui.activities.PlaylistManageActivity" >
+        </activity>
+        <activity android:name="com.langchao.leo.esplayer.ui.activities.AddMusicAcitivity" >
+        </activity>
+        <activity android:name="com.langchao.leo.esplayer.ui.activities.AddMusicActivity2" >
+        </activity>
+
+        <!-- 服务 -->
+        <service android:name="com.langchao.leo.esplayer.services.TimerService" >
+        </service>
+        <!-- 播放服务 -->
+        <service android:name="com.langchao.leo.esplayer.core.PlayerService" >
+        </service>
+
+        <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5694b07067e58eec1300214a" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="360" />
+        <!-- 友盟统计 -->
+        
+    </application>
+
+</manifest>

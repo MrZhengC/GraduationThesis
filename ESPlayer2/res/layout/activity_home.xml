@@ -1,0 +1,158 @@
+<com.langchao.leo.esplayer.ui.widget.draglayout.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draglayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_texture"
+    tools:context="com.langchao.leo.esplayer.HomeActivity" >
+
+    <FrameLayout
+        android:id="@+id/panel_left_menu"
+        android:layout_width="292dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+    <com.langchao.leo.esplayer.ui.widget.draglayout.MainContentLayout
+        android:id="@+id/panel_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" >
+
+        <RelativeLayout
+            android:id="@+id/panel_fragment_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/panel_home_bottom" >
+
+            <RelativeLayout
+                android:id="@+id/panel_home_top"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/white" >
+
+                <ImageView
+                    android:id="@+id/iv_home_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/menu" />
+
+                <ImageView
+                    android:id="@+id/iv_home_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/search" />
+
+                <RadioGroup
+                    android:id="@+id/rg_tab_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rbtn_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:button="@null"
+                        android:text="我的"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbtn_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:button="@null"
+                        android:text="电台"
+                        android:textSize="18dp" />
+
+                    <!-- <RadioButton
+                        android:id="@+id/rbtn_recommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:button="@null"
+                        android:text="推荐"
+                        android:textSize="18dp" /> -->
+                </RadioGroup>
+            </RelativeLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/panel_home_top" >
+            </android.support.v4.view.ViewPager>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/panel_home_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:background="#44666666" >
+
+            <ImageView
+                android:id="@+id/iv_music_cover"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:clickable="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/song_cover" />
+
+            <TextView
+                android:id="@+id/tv_music_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_music_cover"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/iv_music_cover"
+                android:text="歌曲名称"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tv_music_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_music_cover"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/iv_music_cover"
+                android:text="歌手名称"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:id="@+id/iv_favorite"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:button="@null"
+                android:padding="8dp"
+                android:background="@drawable/favorite_outline" />
+
+            <CheckBox
+                android:id="@+id/iv_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/iv_favorite"
+                android:padding="8dp"
+                android:button="@null"
+                android:background="@drawable/ic_play_arrow" />
+        </RelativeLayout>
+    </com.langchao.leo.esplayer.ui.widget.draglayout.MainContentLayout>
+
+</com.langchao.leo.esplayer.ui.widget.draglayout.DragLayout>

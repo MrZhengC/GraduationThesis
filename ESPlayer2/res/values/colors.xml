@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="common_bg_grey">#E8E8E8</color>
+    
+    <color name="tab_checked_green6fCf6e">#6FCF6E</color>
+
+    <color name="mine_btn_green64BB3E">#64BB3E</color>
+    
+    <color name="translucence_white55">#55FFFFFF</color>
+    
+    <color name="translucence_white99">#99FFFFFF</color>
+    
+    <color name="color_blue">#396BAC</color>
+    
+</resources>
